@@ -1,0 +1,260 @@
+html, body{
+padding: 0;
+margin: 0;
+}
+
+
+
+#particles-js{
+position: fixed;
+  top: 0;
+ left: 0;
+ height: 100%;
+ width: 100%;
+ z-index: 0;
+}
+
+.eyes{
+  width: 520px;
+  height: 139px;
+  margin-top: 30px;
+ animation: transparent2 3s linear infinite  alternate;
+float: right;
+}
+
+#radiobells_container{
+  /*float: height;
+  position: absolute;
+    right: 0;
+    height: 0;*/
+  opacity: 0.1;
+  width: 380px;
+  z-index: 3;
+  display: none;
+
+}#radiobells_container:hover {
+animation: forRadio 5s linear infinite  alternate;
+}
+
+
+#rad_player{
+  border-radius: 3px;
+  height: 50px;
+
+}
+#rad_logo{
+display: none;
+}
+
+#tree{
+  width: 22.5%;
+  height: 48%;
+ animation: transparent2 5s linear infinite  alternate;
+position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+#smile{
+  position: fixed;
+  width: 150px;
+  height: 150px;
+  margin-top: 30px;
+  opacity: 0;
+ margin-left: 25px;
+float: left;
+z-index: 2;
+}
+
+#smile:hover {
+animation: forSmile 5s linear infinite  alternate;
+}
+
+#moon{
+  position: fixed;
+  width: 150px;
+  height: 150px;
+  margin-top: 30px;
+ animation: transparent2 2.5s linear infinite  alternate;
+ margin-left: 25px;
+float: left;
+z-index: 1;
+}
+
+#audioWall{
+  display: none;
+}
+
+#Alice{
+  width: 200px;
+  height: 400px;
+  margin-top: 181px;
+}
+
+#Text{
+margin-top: 10%;
+margin-left: 25%;
+  width: 500px;
+  height: 250px;
+text-align: center;
+}
+
+#code{
+  width: 100px;
+  height: 100px;
+  margin-top: 205px;
+  margin-right: 5%;
+  float: right;
+  z-index: 1;
+}
+
+#git{
+  width: 115px;
+  height: 115px;
+  margin-top: 410px;
+  margin-left: 5%;
+  float: left;
+}
+
+
+#Alice:hover{
+animation: transparent 5s linear infinite  alternate;
+
+}
+
+#content{
+ width: 100%;
+ height: 672px;
+ background-color: #312231;
+ opacity: 0.89;
+
+}
+
+#content1{
+ width: 100%;
+ height: 672px;
+ background-color: #b14fa4;
+ opacity: 0.35;
+
+}#textContent{
+  width: 380px;
+  height: 280px;
+  z-index: 3;
+  margin: 0 auto;
+  border: 2.5px black;
+}.text{
+  font-family: serif;
+  font-size: 15px;
+  color: white;
+  align-items: center;
+  z-index: 5;
+}
+/*#warning{
+  margin-top: 50%;
+  opacity: 0.7;
+  width: 420px;
+  height: 320px;
+    z-index: 4;
+}*/
+
+
+
+#content2{
+ width: 100%;
+ height: 669px;
+ background-color: #312231;
+ opacity: 0.89;
+margin-top: 0;
+}
+
+@keyframes transparent {
+ from{
+   opacity: 1;
+   transform: scale(1);
+ }
+
+  to{
+    opacity: 0.3;
+    transform: scale(0.7);
+  }
+}
+
+@keyframes transparent2 {
+ from{
+   opacity: 1;
+ }
+
+  to{
+    opacity: 0.7;
+  }
+}
+
+@keyframes forSmile {
+ from{
+   opacity: 0;
+ }
+
+  to{
+    opacity: 0.1;
+  }
+}
+
+@keyframes forRadio {
+ from{
+   opacity: 0.5;
+ }
+
+  to{
+    opacity: 0.7;
+  }
+}
+
+
+
+@media only screen and (max-width: 500px) {
+  .eyes{
+ width: 320px;
+ height: 80px;
+    }
+    #tree{
+      display: none;
+    }
+
+   #moon{
+     width: 100px;
+     height: 100px;
+
+   }#git{
+     width: 100px;
+     height: 100px;
+     margin-left: 34%;
+
+   }#Alice{
+     width: 125px;
+     height: 250px;
+     z-index: 1;
+
+   }#code{
+    width: 80px;
+     height: 80px;
+
+  }#circle{
+    width: 100px;
+    height: 100px;
+    margin-top: 5%;
+  }#smile{
+    width: 100px;
+    height: 100px;
+  }.quotess{
+   margin-top: 15%;
+
+
+ }
+}
+@media only screen and (max-width: 1001px){
+#tree{
+
+margin-top: 35%;
+
+}
+}

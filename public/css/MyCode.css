@@ -1,0 +1,191 @@
+html, body{
+padding: 0;
+margin: 0;
+}
+
+
+
+#particles-js{
+position: fixed;
+  top: 0;
+ left: 0;
+ height: 100%;
+ width: 100%;
+ z-index: 0;
+  display: block;
+}
+#backgroundFun{
+  position: fixed;
+    top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   z-index: 0;
+   display: none;
+   opacity: 0;
+}
+
+#content{
+ width: 100%;
+ height: 800px;
+  background-color: rgba(177, 79, 164, 0.3);
+ z-index: 1;
+ position: fixed;
+}
+#terminal{
+  margin: 0 auto;
+  width: 950px;
+  height: 350px ;
+  background-color: rgba(21, 18, 44, 0.8);
+}
+#code{
+  margin: 0 auto;
+  width: 950px;
+  height: 350px ;
+  opacity: 0.99;
+  background-color: rgba(13, 11, 13, 0.8);
+  border-radius: 5px 5px 5px 5px;
+}
+#command{
+padding: 10px;
+font-size: 15px;
+color: #f3f3f3;
+font-family: monospace;
+}
+#hs{
+  padding: 10px;
+  font-size: 15px;
+  color: #47986d;
+  font-family: monospace;
+
+}
+#helpTerm{
+  display: none;
+  overflow: auto;
+  height: 333px;
+  z-index: 55;
+}
+#titleTerm{
+  overflow: auto;
+  height: 333px;
+  z-index: 55;
+}
+
+#titleInput{
+  font-size: 15px;
+  color: #f3f3f3;
+  font-family: monospace;
+  bottom: 0;
+  margin-top: 0px;
+}
+.Input{
+bottom: 0;
+background-color: rgba(21, 18, 44, 0);
+font-size: 15px;
+color: #f3f3f3;
+outline:none;
+border: 0;
+padding: 0;
+font-family: monospace;
+}
+
+#simple{
+  font-size: 12.8px;
+  color: white;
+  font-family: monospace;
+
+
+}
+
+#codeButton{
+  margin-top: 0px;
+  float: right;
+color: white;
+display: inline;
+z-index: 4;
+width: 75px;
+height: 18px;
+background-color: rgba(13, 11, 13, 0.1);
+border: 0;
+}
+#runButton{
+  margin-top: 0px;
+  float: right;
+color: white;
+display: none;
+z-index: 4;
+width: 75px;
+height: 18px;
+background-color: rgba(13, 11, 13, 0.1);
+border: 0;
+}
+
+#app1{
+ display: inline-block;
+ width: 950px;
+ height: 320px;
+}
+
+#example{
+width: 350px;
+height: 116px;
+float: right;
+margin-top: 0px;
+margin-right: 10px;
+background-color: #4c4282;
+opacity: 0.35;
+border-radius: 100px 0px 100px 0px;
+}/*background-color: #d0dc7d;*/
+#cssGenerator{
+font-size: 11px;
+color: white;
+font-family: monospace;
+}
+
+#width{
+font-size: 11px;
+color: white;
+font-family: monospace;
+padding: 10px;
+}
+#yourCss{
+ color: #e4d7a1;
+ font-size: 12px;
+ font-family: monospace;
+}
+#yourCss1{
+ color: #e4d7a1;
+ font-size: 12px;
+ font-family: monospace;
+}
+
+#height{
+font-size: 11px;
+color: white;
+font-family: monospace;
+padding: 10px;
+}
+#code1{
+display: none;
+ /*display: inline-block;*/
+ width: 950px;
+ height: 320px;
+ overflow: auto;
+}
+
+#radiobells_container{
+  opacity: 0.1;
+  width: 380px;
+  z-index: 3;
+  display: none;
+
+}
+
+#rad_player{
+  border-radius: 3px;
+  height: 50px;
+
+}
+#rad_logo{
+display: none;
+}

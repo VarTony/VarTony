@@ -1,0 +1,46 @@
+#degreeOfTriple{
+  display: none;
+}
+#isPerfect{
+  display: none;
+}
+#sumSquareDifference{
+  display: none;
+}
+
+.InputHex{
+background-color: #d8d5ea;
+font-size: 15px;
+color: #101a27;
+outline:none;
+border: 2px;
+font-family: monospace;
+}
+
+.blockHex{
+  width: 950px;
+  height: 320px;
+}
+
+.outputHex{
+ font-size: 15px;
+ color: #d8d5ea;
+ padding: 10px;
+}
+
+.noteHex{
+  color: #d8d5ea;
+  font-family: serif;
+  font-size: 15px;
+  padding: 10px;
+}
+
+#DOTCode{
+display: none;
+}
+#IPCode{
+display: none;
+}
+#SSDCode{
+display: none;
+}

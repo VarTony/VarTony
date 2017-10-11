@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/jpg" href="https://vignette2.wikia.nocookie.net/destinypedia/images/4/47/Moon.png/revision/latest?cb=20140614204644" />
+  <meta charset="utf-8" />
+  <title>varTony</title>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
+  <meta name="author" content="Vincent Garreau" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" media="screen" href="css/preloader.css">
+  <link rel="stylesheet" media="screen" href="css/MyCode.css">
+  <link rel="stylesheet" media="screen" href="css/style.css">
+  <link rel="stylesheet" media="screen" href="playgraund/generator.css">
+  <link rel="stylesheet" media="screen" href="css/hexlet-practics .css">
+  <!-- <link href="css/theme.css" rel="stylesheet" type="text/css"> -->
+</head>
+<body>
+  <div id="root" class = 'rootkit'>
+<img id = "circle" src="./image/loading.png"  />
+<div id="cont">
+
+<h2 id = "quotes" class ="quotess">- Самые сомнительные события - это именно те, которые наблюдались наибольшим числом людей.
+<br />
+<i>Гюстав Лебон</i>
+</h2>
+
+<h2 id = "quotes1" class ="quotess">- Если разом осушить бутылку с пометкой «яд», то рано или поздно, почти наверняка, почувствуешь легкое недомогание.
+<br />
+<i>Льюис Кэрролл "Алиса в стране чудес"</i>
+</h2>
+
+<h2 id = "quotes2" class ="quotess"> - Нельзя поверить в невозможное!<br />
+ - Просто у тебя мало опыта, - заметила Королева. – В твоем возрасте я уделяла этому полчаса каждый день! В иные дни я успевала поверить в десяток невозможностей до завтрака!
+<br />
+<i>Льюис Кэрролл "Алиса в Зазеркалье"</i>
+</h2>
+
+<h2 id = "quotes3" class ="quotess">- Не все ли равно, о чем спрашивать, если ответа все равно не получишь, правда?
+
+<br />
+<i>Льюис Кэрролл "Алиса в стране чудес"</i>
+</h2>
+
+<h2 id = "quotes4" class ="quotess"> - У солдата, которого ведут под конвоем, всегда больше опыта, чем у тех, кто его караулит
+
+<br />
+<i>Ярослав Гашек "Похождения бравого солдата Швейка"</i>
+</h2>
+
+<h2 id = "quotes5" class ="quotess">- Lisp — это не язык, а строительный материал.
+<br />
+<i>Алан Кей</i>
+</h2>
+
+</div>
+  </div>
+  <div id="radiobells_container">
+    <audio  id ="audioWall" src="music/sound.mp3"  controls="in"></audio>
+     </div>
+<script src = "js/loadingPage.js"></script>
+  <!-- particles.js container -->
+  <div id="particles-js">
+  </div>
+
+<div  id="content">
+    <div id="terminal">
+      <div  id="titleTerm">
+
+    <pre><p id = 'command'> </p></pre>
+
+    <p id="hs"></p>
+    </div>
+    <div  id="helpTerm">
+    <pre> <p id = 'command'>
+    Чтобы открыть код приложения воспользуйтесь кнопкой в правом нижнем углу терминала;<br/>
+    Для того чтобы воспользоваться терминалом введите одну из следующих команд в консоль;<br/>
+    --Help                  -h    справка;<br/>
+    --Back                  -b    вернуться назад;<br/>
+    --Css generator         -cg   открыть css генератор; <br/>
+    --DegreeOfTriple        -dot  проверить является ли число степенью тройки;<br/>
+    --isPerfect             -ip   проверить является ли число совершенным;<br/>
+    --sumSquareDifference   -ssd  найти разницу между суммой квадратов и квадратом сумм числа; <br/>
+    --Sing me               -sm   запустить радио;  <br/>
+    --And stop              -as   отключить радио; <br/>
+    --Background fun        -bf   поменять фон на южнокорейский 'girls-band';<br/>
+    --Stop fun              -sf   вернуть стандартный фон;<br/>
+
+  </p></pre>
+  </div>
+    <button id = 'runButton' onclick ='buttonControler()' >App</button>
+    <button id = 'codeButton' onclick ='buttonControler()' >Code </button>
+      <p id = 'titleInput'> VarTony:~/MyCode$ <input id = 'inputCommand'  class = 'Input' type="text" size="40" oninput = 'Codelook()'><p/>
+    </div>
+
+
+    <div id="code">
+      <div id = 'app1'>
+        <p id = "cssGenerator"> border-radius:
+        <input id = 'rtc' class = 'inputValue' type="range"  value="100" min="0" max="100"   onchange="bradius()">
+          <input id = 'ltc' class = 'inputValue' type="range"  value="0"  min="0" max="100" oninput="bradius()">
+            <input id = 'rbc' class = 'inputValue' type="range"  value="100" min="0" max="100" oninput="bradius()">
+              <input id = 'lbc' class = 'inputValue' type="range"  value="0" min="0" max="100" oninput="bradius()">
+            </p>
+                <p id = "width"> Width:
+            <input id = 'Wchange' value = '350' type="range" min = '10' max = '500' oninput = "bradius()" ></p>
+          <p id = "height"> Height:
+        <input id = 'Hchange' value = '116' type="range" min = '10' max = '500' oninput = "bradius()" ></p>
+        <pre id = 'yourCss' ><code></code></pre>
+        <pre id = 'yourCss1' ><code></code></pre>
+    <div id = "example" onclick="changeColor()"></div>   <!-- block -->
+</div>
+
+    <div id = 'degreeOfTriple' class = 'blockHex'>
+      <h1 class = 'noteHex' >
+        Например, число 27 это третья степень (3^3), а 81 это четвертая (3^4).
+      </h1>
+      <input id = 'dotInput' type = 'text' class = 'InputHex' onchange="DOT()" />
+      <h1 id = 'dotAnswer' class = 'outputHex'> Your answer will be here.</h1>
+    </div>
+
+    <div id = 'isPerfect' class = 'blockHex'>
+      <h1 class = 'noteHex' >
+        Совершенным называется число, равное сумме всех своих делителей (включая 1, но исключая само число).
+        Наименьшее из совершенных чисел 6 равно сумме трех своих делителей 1, 2 и 3.
+         Следующее совершенное число 28=1+2+4+7+14.
+         Ранние комментаторы Ветхого завета, пишет в своей книге «Математические новеллы» Мартин Гарднер, усматривали в совершенстве чисел 6 и 28 особый смысл.
+         Разве не за 6 дней был сотворен мир, восклицали они, и разве Луна обновляется не за 28 суток?
+          Первым крупным достижением теории совершенных чисел была теорема Евклида о том, что число 2n-1(2n-1) - четное и совершенное, если число 2n-1 - простое.
+           Лишь две тысячи лет спустя Эйлер доказал, что формула Евклида содержит все четные совершенные числа.</h1>
+      <input id = 'ipInput' type = 'text' class = 'InputHex' onchange="IP()" />
+      <h1 id = 'ipAnswer' class = 'outputHex'>Your answer will be here.</h1>
+    </div>
+
+    <div id = 'sumSquareDifference' class = 'blockHex'>
+      <h1 class = 'noteHex' >
+        Сумма квадратов первых десяти натуральных чисел это 12 + 22 + 32 + ... + 10 2 = 385.
+        Квадрат суммы первых десяти натуральных чисел это (1 + 2 + 3 + ... + 10)2 = 552 = 3025.
+       Разница между квадратом суммы и суммой квадратов первых десяти натуральных чисел: 3025 − 385 = 2640..</h1>
+      <input id = 'ssdInput' class = 'InputHex' type = 'text' onchange="SSD()" />
+        <h1 id = 'ssdAnswer' class = 'outputHex'>Your answer will be here.</h1>
+    </div>
+
+      <div id = 'code1' class = 'code'>
+        <pre><code id = "simple">
+          /* JS */
+
+
+          const bradius = () => {
+          let yourCss = document.getElementById('yourCss');
+          var example = document.getElementById('example');
+          var w = document.getElementById('Wchange').value;
+          var h = document.getElementById('Hchange').value;
+          var rtc = document.getElementById('rtc').value;
+          var ltc = document.getElementById('ltc').value;
+          var rbc = document.getElementById('rbc').value;
+          var lbc = document.getElementById('lbc').value;
+          var example = document.getElementById('example');
+          example.style.borderRadius =  rtc + "px "  + ltc + "px "  + rbc + "px " + lbc + "px ";
+          example.style.width = `${w}px `;
+          example.style.height = `${h}px `;
+          yourCss.innerHTML = ` border-radius: ${rtc}px  ${ltc}px  ${rbc}px  ${lbc}px; \n`;
+          yourCss.innerHTML += ` width: ${w}px; \n`;
+          yourCss.innerHTML += ` height: ${h}px; `;
+          }
+
+
+            let yourCss = document.getElementById('yourCss');
+            var w = document.getElementById('Wchange').value;
+            var h = document.getElementById('Hchange').value;
+            var rtc = document.getElementById('rtc').value;
+            var ltc = document.getElementById('ltc').value;
+            var rbc = document.getElementById('rbc').value;
+            var lbc = document.getElementById('lbc').value;
+
+          yourCss.innerHTML = ` border-radius: ${rtc}px  ${ltc}px  ${rbc}px  ${lbc}px; \n`;
+          yourCss.innerHTML += ` width: ${w}px; \n`;
+          yourCss.innerHTML += ` height: ${h}px; \n`;
+          yourCss1.innerHTML += ` background-color: #4c4282; `;
+
+
+
+          function changeColor(){
+          let example = document.getElementById('example');
+            let random = (max = 12131217, min = 0) => Math.floor(Math.random() * (max - min)) + min;
+            let colorCode = `#${random().toString(16)}`;
+           example.style.backgroundColor = colorCode;
+           yourCss1.innerHTML = ` background-color: ${colorCode}; `;
+
+          }
+        // END
+  </code></pre>
+      </div>
+      <div id = 'DOTCode' class = 'code'>
+        <pre><code id = "simple">
+          /* JS */
+          const degreeOfTriple = (n, i = 0, answer = n) => {
+
+            if (n <= 3) return (3 % n === 0) ? true : false;
+
+             while(i <= n / 2) {
+               i ++;
+               answer = answer / 3;
+               if(answer === 3) return true;
+             }
+
+              return false;
+
+
+          }
+           // END
+     </code></pre>
+      </div>
+
+      <div id = 'IPCode' class = 'code'>
+        <pre><code id = "simple">
+          /* JS */
+          const isPerfect = (number, i = 0, check = number) => {
+
+           let answer;
+           if(number === 0) return false;
+
+           while( check >= 0){
+             (number % check === 0 && check !== number)? i += check: i;
+             check--;
+
+           }
+
+           if(i === number) answer = true;
+           if(i !== number) answer = false;
+
+               return answer;
+          }
+         // END
+      </code></pre>
+      </div>
+
+      <div id = 'SSDCode' class = 'code'>
+        <pre><code id = "simple">
+          /* JS */
+          const sqrt = n => (n * n);
+
+            const sumSquareDifference = (n) => {
+
+               let n0 = 0;
+               let n1 = 0;
+
+               for(let i = 0; i <= n; i++){
+                 n0 += sqrt(i);
+                 n1 += i;
+
+               }
+               return (sqrt(n1) < n0)? n0 - sqrt(n1):  (sqrt(n1) - n0);
+
+            }
+
+          // END
+
+
+      </code></pre>
+      </div>
+
+    </div>
+</div>
+<!-- <div id="backgroundFun"> -->
+
+  <iframe id = 'vivi' width="100%" height="100%"  frameborder="0" allowfullscreen></iframe>
+<!-- </div> -->
+
+<script src="./playgraund/hexlet-practics.js"></script>
+ <script src="./playgraund/generatorCss.js"></script>
+  <script src="./particle/particles.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="js/MyCode.js"></script>
+  <script id = 'singMe' src = "./js/singMeMyCode.js" ></script>
+  <script id = 'radio' src="https://www.radiobells.com/script/v1_5.js" charset="UTF-8"></script>
+  <script src="js/preloaderMyCode.js"></script>
+  </body>
+  </html>

@@ -1,0 +1,136 @@
+/*body{
+ background-color: #312231;
+}*/
+#root{
+position: fixed;
+left: 0;
+top: 0;
+background-color: #312231;
+height: 100%;
+width: 100%;
+z-index: 55;
+transition: 1s all;
+opacity: 1;
+visibility: visible;
+}
+.done{
+  opacity: 0;
+  visibility: hidden;
+}
+
+#cont{
+  position: fixed;
+  width: 43%;
+  height: 120px;
+  margin-top: 30%;
+  margin-left: 28%;
+   overflow: hidden;
+}
+.quotess{
+ font-size: 15px;
+
+}
+
+#quotes{
+font-family: serif;
+ color: #d8b7e2;
+ -moz-animation: transparent 5s infinite alternate;
+ -webkit-animation: transparent 5s infinite alternate;
+  animation: transparent 5s infinite alternate;
+ display: none;
+}
+
+#quotes1{
+ font-family: serif;
+ color: #d8b7e2;
+ -moz-animation: transparent 5s infinite alternate;
+ -webkit-animation: transparent 5s infinite alternate;
+  animation: transparent 5s infinite alternate;
+ display: none;
+}
+
+#quotes2{
+font-family: serif;
+ color: #d8b7e2;
+ -moz-animation: transparent 5s infinite alternate;
+ -webkit-animation: transparent 5s infinite alternate;
+  animation: transparent 5s infinite alternate;
+ display: none;
+}
+
+#quotes3{
+font-family: serif;
+ color: #d8b7e2;
+ -moz-animation: transparent 5s infinite alternate;
+ -webkit-animation: transparent 5s infinite alternate;
+  animation: transparent 5s infinite alternate;
+ display: none;
+}
+
+#quotes4{
+font-family: serif;
+ color: #d8b7e2;
+ -moz-animation: transparent 5s infinite alternate;
+ -webkit-animation: transparent 5s infinite alternate;
+  animation: transparent 5s infinite alternate;
+ display: none;
+}
+
+#quotes5{
+ font-family: serif;
+ color: #d8b7e2;
+ -moz-animation: transparent 5s infinite alternate;
+ -webkit-animation: transparent 5s infinite alternate;
+  animation: transparent 5s infinite alternate;
+ display: none;
+}
+
+i{
+  padding-left: 25px;
+}
+/*.quotes{
+  margin-top: 15%;
+
+
+}*/
+
+
+#circle{
+ margin-top: 10%;
+ margin-left: 43%;
+ position: fixed;
+ width: 150px;
+ height: 150px;
+ animation: transparent 3s linear infinite alternate;
+ animation: spin 5s linear infinite;
+}
+
+@keyframes transparent {
+ from{
+   opacity: 0.3;
+ }
+
+  to{
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+   from{
+     transform: rotate(0deg);
+   }
+  to{
+     transform: rotate(360deg);
+
+  }
+
+
+}
+@media only screen and (max-width: 500px) {
+
+#root{
+visibility: hidden;
+  display: none;
+}
+
+}

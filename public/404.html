@@ -1,0 +1,196 @@
+<<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/jpg" href="https://vignette2.wikia.nocookie.net/destinypedia/images/4/47/Moon.png/revision/latest?cb=20140614204644" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Demo game</title>
+    <link rel="stylesheet" media="screen" href="./css/404.css" />
+  </head>
+  <body>
+    <div id="particles-js">
+      <h1 id = '404title'>   404 <br />
+        <small>Not found<small/></h1>
+    </div>
+
+
+    <a href="https://radiopotok.ru/" target="_blank"><img href="./sprites/moon.png"/></a>
+    <script type="text/javascript" src="//yandex.st/jquery/1.8.2/jquery.min.js"></script>
+    <script async type="text/javascript" src="//radiopotok.ru/f/script5/093f65e080a295f8076b1c5722a46aa2.js" charset="UTF-8"></script>
+
+    <!-- <audio  id ="audioWall" autoplay="autoplay" loop = 'loop' src="../music/404Sound.mp3"  controls="in"></audio> -->
+    <script type="text/javascript" src="PointJS1.5.0/point.min.js"></script>
+  <script>
+
+  var pjs = new PointJS('2d', 1000, 1000, {opacity: 0.71});
+    var myStyle = pjs.system.setStyle();
+  pjs.system.initFullPage();
+  var game = pjs.game;
+  var point = pjs.vector.point;
+
+  var height = game.getWH().h;
+  var width = game.getWH().w;
+
+  var moon = game.newImageObject({
+   x : 50, y : 35,
+   file : './sprites/moon.png',
+  //  h : height,
+   w: 150,
+     h : 150
+  });
+
+
+
+  var cloud = game.newImageObject({
+   x : 300, y : 50,
+   file : './sprites/Cloud.png',
+   w: 450,
+     h : 150
+  });
+
+  var fuji = game.newImageObject({
+   x : 50, y : 35,
+   file : './sprites/fuji2.png',
+   w: 1300,
+     h : 550
+  });
+
+  var cloud2 = game.newImageObject({
+   x : 50, y : 105,
+   file : './sprites/cloud2.png',
+   w: 300,
+     h : 150
+  });
+
+  var fon1 = game.newImageObject({
+   x : 0, y : 280,
+   file : './sprites/city.png',
+  //  h : height,
+   w: 1400,
+     h : 300,
+   onload : function () {
+     fon2.x = fon1.x+fon1.w;
+   }
+  });
+
+  var fon2 = game.newImageObject({
+   x : 0, y : 280,
+   file : './sprites/city.png',
+ w: 1400,
+  h : 300
+  });
+
+  var gr1 = game.newImageObject({
+   x : 0, y : 0,
+   file : './sprites/background1.png',
+   w : width,
+   onload : function () {
+     gr2.y = gr1.y = height - gr1.h + 50;
+     gr2.x = gr1.x+gr1.w;
+   }
+  });
+
+  var gr2 = game.newImageObject({
+   x : 0, y : 0,
+   file : './sprites/background1.png',
+   w : width
+  });
+
+  var ninja = game.newAnimationObject({
+    x : width / 4, y : 450,
+    h: 126, w: 125,
+    delay : 3,
+    animation : pjs.tiles.newAnimation('./sprites/run.png', 149, 126, 8)
+  });
+
+
+
+  var moveBackGround = function (s) {
+    cloud.move(point(-s * 0.1, 0));
+    cloud2.move(point(-s * 0.2, 0));
+
+    fon1.move(point(-s / 3.5, 0));
+    fon2.move(point(-s / 3.5, 0));
+
+    gr1.move(point(-s, 0));
+    gr2.move(point(-s, 0));
+
+    if (cloud.x + cloud.w < 0) {
+      cloud.x = cloud2.x+cloud2.w + width;
+    }
+
+    if (cloud2.x + cloud2.w < 0) {
+      cloud2.x = cloud.x+cloud.w + width;
+}
+    if (fon1.x + fon1.w < 0) {
+      fon1.x = fon2.x+fon2.w;
+    }
+
+    if (fon2.x + fon2.w < 0) {
+      fon2.x = fon1.x+fon1.w;
+    }
+
+    if (gr1.x + gr1.w < 0) {
+      gr1.x = gr2.x+gr2.w;
+    }
+
+    if (gr2.x + gr2.w < 0) {
+      gr2.x = gr1.x+gr1.w;
+    }
+
+  };
+
+  game.newLoop('game', function () {
+    game.fill('#312231' );
+    moon.draw();
+    cloud.draw();
+    fuji.draw();
+    cloud2.draw();
+    fon1.draw();
+    fon2.draw();
+    gr1.draw();
+    gr2.draw();
+
+    ninja.y = -ninja.h + gr1.y + gr1.h /2.7;
+    ninja.draw();
+
+    moveBackGround(5);
+
+  });
+
+  game.startLoop('game');
+
+
+
+//      const  pointJS = new PointJS(1400, 1200, {backgroundColor: 'white'});
+//           const game = pointJS.game;
+//
+//               let  ninjaWGo = 1100 / 8;
+//
+//           var ninga = game.newAnimationObject({
+//            x: 0, y: 0,
+//            h: 108, w :  ninjaWGo,
+//            delay: 5,
+//            animation : pointJS.tiles.newAnimation('./sprites/runingSprite.png', 108, ninjaWGo, 9)
+// });
+//
+//           //
+//           // let rect = game.newRectObject({
+//           //   x: 500, y: 300,
+//           //   w:300, h: 110,
+//           //   fillColor: "white"
+//           // });
+//
+//           game.newLoop("ningaGo", () => {
+//               ninga.draw();
+//
+//   });
+
+ // game.setLoop('ningaGo');
+ // game.start();
+
+  </script>
+  <!-- <script src="../particle/particles.js"></script> -->
+  </body>
+</html>
